@@ -14,6 +14,7 @@ This guide will setup a development environment with:
 
 1. Signup for Windows Insider Program and follow all updates
 2. PowerShell (as Administrator):
+
    ```pwsh
    dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
@@ -21,12 +22,15 @@ This guide will setup a development environment with:
    wsl --set-default-version 2
    wsl --set-version Ubuntu 2
    ```
+
 3. Install Ubuntu from Windows Store
-4. Download & install Visual Studio Code
-5. Docker Desktop for Windows Edge:  
+4. Docker Desktop for Windows Edge:
    - Download from https://docs.docker.com/docker-for-windows/edge-release-notes/
    - Enable WSL 2 Backend
    - Enable integration for Ubuntu
+5. Download & install Fira Code
+   https://github.com/tonsky/FiraCode/
+6. Download & install Visual Studio Code
 
 ## Ubuntu Setup
 
@@ -37,13 +41,14 @@ This guide will setup a development environment with:
    cd wsl-config && make install
    ```
 3. Optional:
+
    ```
    # create new SSH identity
    ssh-keygen -t ed25519
 
    # import PGP identity
    gpg --allow-secret-key-import --import /tmp/privkey
-   
+
    # add it to Git
    gpg --list-secret-keys --keyid-format LONG
    gpg --edit-key 7595F9144CE9BA4B trust

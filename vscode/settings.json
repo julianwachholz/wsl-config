@@ -1,0 +1,37 @@
+{
+  "editor.fontSize": 16,
+  "editor.fontFamily": "Fira Code Retina",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Ocean Dark Extended",
+  "files.exclude": {
+    "**/.cache": true,
+    "**/*.egg-info": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.vscode": true,
+    "**/node_modules": true,
+    "**/__pycache__": true
+  },
+  "python.linting.flake8Enabled": true,
+  "editor.minimap.enabled": true,
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [";"],
+      "after": [":"]
+    }
+  ],
+  "files.trimTrailingWhitespace": true,
+  "editor.wordWrapColumn": 129,
+  "editor.cursorBlinking": "phase",
+  "editor.formatOnPaste": true,
+  "editor.minimap.renderCharacters": false,
+  "files.trimFinalNewlines": true
+}
