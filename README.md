@@ -48,3 +48,10 @@ This guide will setup a development environment with:
    gpg --list-secret-keys --keyid-format LONG
    gpg --edit-key 7595F9144CE9BA4B trust
    ```
+
+## Google Cloud Setup
+
+```
+gcloud init
+gcloud auth configure-docker
+```
