@@ -119,6 +119,7 @@ if ! shopt -oq posix; then
 fi
 
 eval "$(ssh-agent)" &> /dev/null
+export GPG_TTY=$(tty)
 
 # Setup direnv
 eval "$(direnv hook bash)"

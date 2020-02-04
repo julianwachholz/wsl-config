@@ -46,6 +46,7 @@ This guide will setup a development environment with:
    
    # add it to Git
    gpg --list-secret-keys --keyid-format LONG
-   git config --global user.signingkey KEYID
+   gpg --edit-key 7595F9144CE9BA4B trust
+   git config --global user.signingkey 7595F9144CE9BA4B
    git config --global commit.sign true
    ```

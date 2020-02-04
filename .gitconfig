@@ -1,6 +1,7 @@
 [user]
 	name = Julian Wachholz
 	email = julian@wachholz.ch
+	signingkey = 7595F9144CE9BA4B
 
 [core]
 	pager = less -FRSX
@@ -43,3 +44,6 @@
 
 [push]
 	default = simple
+
+[commit]
+	gpgsign = true
