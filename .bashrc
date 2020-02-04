@@ -94,6 +94,8 @@ alias l='ls -hCF'
 alias g='git'
 alias gcm='git checkout master'
 alias dc='docker-compose'
+alias ..='cd ..'
+alias ...='cd ../..'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
