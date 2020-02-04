@@ -92,6 +92,7 @@ alias ll='ls -halF'
 alias la='ls -hA'
 alias l='ls -hCF'
 alias g='git'
+alias gcm='git checkout master'
 alias dc='docker-compose'
 
 # Add an "alert" alias for long running commands.  Use like so:
