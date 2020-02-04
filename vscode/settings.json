@@ -1,4 +1,5 @@
 {
+  "workbench.colorTheme": "Ocean Dark Extended",
   "editor.fontSize": 16,
   "editor.fontFamily": "Fira Code Retina",
   "editor.fontLigatures": true,
@@ -7,7 +8,6 @@
     "source.organizeImports": true
   },
   "editor.tabSize": 2,
-  "workbench.colorTheme": "Ocean Dark Extended",
   "files.exclude": {
     "**/.cache": true,
     "**/*.egg-info": true,
@@ -20,6 +20,7 @@
     "**/__pycache__": true
   },
   "python.linting.flake8Enabled": true,
+  "python.venvPath": "~/.cache/pypoetry/virtualenvs",
   "editor.minimap.enabled": true,
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
@@ -33,5 +34,14 @@
   "editor.cursorBlinking": "phase",
   "editor.formatOnPaste": true,
   "editor.minimap.renderCharacters": false,
-  "files.trimFinalNewlines": true
+  "files.trimFinalNewlines": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true
 }
