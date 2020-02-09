@@ -14,7 +14,7 @@
 [alias]
 	s = status
 	c = commit
-	recommit = !git commit -eF $(git rev-parse --git-dir)/COMMIT_EDITMS
+	recommit = !git commit -eF $(git rev-parse --git-dir)/COMMIT_EDITMSG
 	co = checkout
 	com = checkout master
 	d = diff
