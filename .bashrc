@@ -121,7 +121,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(ssh-agent)" &> /dev/null
+# only run one ssh-agent
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent` &> /dev/null
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+
 export GPG_TTY=$(tty)
 
 # Setup direnv
