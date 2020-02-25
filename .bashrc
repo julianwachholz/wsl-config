@@ -122,11 +122,21 @@ if ! shopt -oq posix; then
 fi
 
 # only run one ssh-agent
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-  eval `ssh-agent` &> /dev/null
-  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+SSH_ENV="$HOME/.ssh/environment"
+function start_agent {
+    echo "ssh-agent"
+    ssh-agent | sed 's/^echo/#echo/' > "${SSH_ENV}"
+    chmod 600 "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+}
+if [ -f "${SSH_ENV}" ]; then
+  . "${SSH_ENV}" > /dev/null
+  ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
+    start_agent;
+  }
+else
+  start_agent;
 fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
 
 export GPG_TTY=$(tty)
 
