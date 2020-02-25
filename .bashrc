@@ -144,7 +144,7 @@ export GPG_TTY=$(tty)
 eval "$(direnv hook bash)"
 
 # Setup pyenv
-export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:$PATH"
+export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:/home/jwa/.yarn/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
