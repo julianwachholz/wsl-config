@@ -138,6 +138,7 @@ else
   start_agent;
 fi
 
+export EDITOR=vim
 export GPG_TTY=$(tty)
 
 # Setup direnv
