@@ -146,7 +146,7 @@ export CHROME_BIN=/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrom
 eval "$(direnv hook bash)"
 
 # Setup pyenv
-export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:/home/jwa/.yarn/bin:$PATH"
+export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:/home/jwa/.local/bin:/home/jwa/.yarn/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
