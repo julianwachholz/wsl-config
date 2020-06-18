@@ -164,3 +164,5 @@ enter_directory() {
 }
 
 export PROMPT_COMMAND=enter_directory
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
