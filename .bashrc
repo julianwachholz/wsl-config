@@ -140,6 +140,9 @@ fi
 
 export EDITOR=vim
 export GPG_TTY=$(tty)
+export PGHOST=localhost
+export PGUSER=postgres
+export PGPASSWORD=p0stgr3s
 
 # Setup direnv
 eval "$(direnv hook bash)"
