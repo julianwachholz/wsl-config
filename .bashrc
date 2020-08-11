@@ -144,9 +144,6 @@ export PGHOST=localhost
 export PGUSER=postgres
 export PGPASSWORD=p0stgr3s
 
-# Setup direnv
-eval "$(direnv hook bash)"
-
 # Setup pyenv
 export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:/home/jwa/.local/bin:/home/jwa/.yarn/bin:$PATH"
 eval "$(pyenv init -)"
@@ -169,3 +166,6 @@ enter_directory() {
 export PROMPT_COMMAND=enter_directory
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Setup direnv
+eval "$(direnv hook bash)"
