@@ -22,16 +22,6 @@ NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install node
 
-# Install Google Cloud SDK
-echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-sudo apt update && sudo apt install -y google-cloud-sdk
-
-# Install Google Chrome (for headless testing)
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
-sudo apt update && sudo apt install google-chrome-stable
-
 # Setup bash alias completion
 [ -d complete-alias ] && cd complete-alias && git pull && cd ..
 [ ! -d complete-alias ] && git clone https://github.com/cykerway/complete-alias.git
