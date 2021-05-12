@@ -13,8 +13,6 @@ direnv bash-completion apt-transport-https ca-certificates gnupg
 
 # Install pyenv
 [ ! $(which pyenv) ] && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-PYENV=$HOME/.pyenv/bin/pyenv
-[ ! $(which pyenv) ] && $PYENV install 3.8.1 && $PYENV global 3.8.1
 
 # Install nvm and latest node version
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash

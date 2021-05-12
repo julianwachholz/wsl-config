@@ -145,9 +145,17 @@ export PGUSER=postgres
 export PGPASSWORD=p0stgr3s
 
 # Setup pyenv
-export PATH="/home/jwa/go/bin:/home/jwa/.pyenv/bin:/home/jwa/.local/bin:/home/jwa/.yarn/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+#eval "$(pyenv virtualenv-init -)"
+
+# Add yarn and go binaries
+export PATH="/home/jwa/.local/bin:/home/jwa/go/bin:/home/jwa/.yarn/bin:$PATH"
 
 # Setup nvm
 export NVM_DIR="$HOME/.nvm"
